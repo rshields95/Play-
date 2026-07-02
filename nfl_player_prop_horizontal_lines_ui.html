@@ -1,0 +1,160 @@
+<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-lg); padding:1.25rem;">
+<h2 class="sr-only">Mockup of player prop market cards for Buffalo Bills vs New England Patriots where every alt line is shown as a horizontally scrolling strip per player, matching the existing Total market design, instead of a tap-to-expand dropdown</h2>
+<style>
+.nm{font-family:var(--font-sans);background:#101012;border-radius:14px;border:1px solid #232326;overflow:hidden;color:#f0f0f1}
+.pill{flex:0 0 auto;padding:7px 13px;border-radius:999px;border:1px solid #2c2d31;background:#1c1d20;color:#a3a3a7;font-size:12.5px;cursor:pointer;white-space:nowrap}
+.pill.active{background:#1c2e17;border-color:#5fbf34;color:#7ed957}
+.card{background:#17181b;border-radius:12px;border:1px solid #232326;margin-bottom:10px}
+.chead{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;cursor:pointer}
+.iconbtn{width:26px;height:26px;border-radius:50%;background:#202226;display:flex;align-items:center;justify-content:center;color:#9a9a9e;flex:0 0 auto}
+.prow{display:flex;align-items:center;gap:12px;padding:11px 14px;border-top:1px solid #202124}
+.card > .cbody > .prow:first-child{border-top:none}
+.pinfo{flex:0 0 auto;min-width:108px;display:flex;align-items:center;gap:9px}
+.jersey{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:500;color:#fff;flex:0 0 auto}
+.strip{display:flex;gap:8px;overflow-x:auto;flex:1;padding-bottom:2px}
+.oddbtn{background:#202226;border:1px solid #2a2c30;border-radius:10px;padding:8px 12px;min-width:58px;text-align:center;flex:0 0 auto}
+.oddbtn .l{display:block;font-size:10px;color:#9a9a9e;margin-bottom:2px;white-space:nowrap}
+.oddbtn .v{display:block;font-size:14px;font-weight:500;color:#f0f0f1}
+.subtab{flex:0 0 auto;padding:5px 11px;border-radius:8px;border:1px solid #2c2d31;background:#1c1d20;color:#a3a3a7;font-size:11.5px;cursor:pointer}
+.subtab.active{background:#1c2e17;border-color:#5fbf34;color:#7ed957}
+</style>
+<div class="nm">
+<div style="display:flex;align-items:center;gap:8px;padding:14px 14px 10px;overflow-x:auto" id="pillrow">
+<div class="pill active" data-p="receptions">Receptions</div>
+<div class="pill" data-p="fieldgoals">Field goals</div>
+<div class="pill" data-p="recyards">Receiving yds</div>
+<div class="pill" data-p="combined">Rush+rec yds</div>
+<div class="pill" data-p="interceptions">Interceptions</div>
+<div class="pill" data-p="sacks">Sacks</div>
+<div class="pill" data-p="kicking">Kicking pts</div>
+<div class="pill" data-p="anytime">Score anytime</div>
+<div class="pill" data-p="passing">Passing</div>
+</div>
+<div style="padding:2px 14px 16px">
+
+<div class="panel" id="p-receptions">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player receptions</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">85</div><span style="font-size:13px">Hunter Henry</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">1.20</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">1.55</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">2.20</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">1.86</span></div><div class="oddbtn"><span class="l">5+</span><span class="v">2.90</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">7</div><span style="font-size:13px">Kayshon Boutte</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">1.02</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">1.18</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">2.40</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">2.64</span></div><div class="oddbtn"><span class="l">5+</span><span class="v">4.33</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">38</div><span style="font-size:13px">R. Stevenson</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">1.11</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">1.55</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">2.63</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">5.50</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">13</div><span style="font-size:13px">Khalil Shakir</span></div><div class="strip"><div class="oddbtn"><span class="l">6+</span><span class="v">2.63</span></div><div class="oddbtn"><span class="l">8+</span><span class="v">5.00</span></div></div></div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-fieldgoals" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player field goals made</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">K</div><span style="font-size:13px">A. Borregales</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">1.20</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">2.00</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">4.50</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">11.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">K</div><span style="font-size:13px">M. Prater</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">1.22</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">2.15</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">5.00</span></div></div></div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-recyards" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player receiving yards</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">14</div><span style="font-size:13px">S. Diggs</span></div><div class="strip"><div class="oddbtn"><span class="l">30+</span><span class="v">1.20</span></div><div class="oddbtn"><span class="l">45+</span><span class="v">1.80</span></div><div class="oddbtn"><span class="l">60+</span><span class="v">2.25</span></div><div class="oddbtn"><span class="l">70+</span><span class="v">2.88</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">13</div><span style="font-size:13px">Khalil Shakir</span></div><div class="strip"><div class="oddbtn"><span class="l">35+</span><span class="v">1.45</span></div><div class="oddbtn"><span class="l">40+</span><span class="v">1.60</span></div><div class="oddbtn"><span class="l">45+</span><span class="v">1.90</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">38</div><span style="font-size:13px">R. Stevenson</span></div><div class="strip"><div class="oddbtn"><span class="l">5+</span><span class="v">1.24</span></div><div class="oddbtn"><span class="l">10+</span><span class="v">1.62</span></div><div class="oddbtn"><span class="l">15+</span><span class="v">2.10</span></div></div></div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-combined" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player rushing + receiving yards</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">4</div><span style="font-size:13px">James Cook</span></div><div class="strip"><div class="oddbtn"><span class="l">80+</span><span class="v">1.29</span></div><div class="oddbtn"><span class="l">90+</span><span class="v">1.48</span></div><div class="oddbtn"><span class="l">100+</span><span class="v">1.75</span></div><div class="oddbtn"><span class="l">125+</span><span class="v">2.90</span></div><div class="oddbtn"><span class="l">150+</span><span class="v">5.25</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">38</div><span style="font-size:13px">R. Stevenson</span></div><div class="strip"><div class="oddbtn"><span class="l">45+</span><span class="v">1.46</span></div><div class="oddbtn"><span class="l">50+</span><span class="v">1.67</span></div><div class="oddbtn"><span class="l">60+</span><span class="v">2.20</span></div><div class="oddbtn"><span class="l">70+</span><span class="v">3.00</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">32</div><span style="font-size:13px">T. Henderson</span></div><div class="strip"><div class="oddbtn"><span class="l">45+</span><span class="v">1.24</span></div><div class="oddbtn"><span class="l">50+</span><span class="v">1.35</span></div><div class="oddbtn"><span class="l">60+</span><span class="v">1.65</span></div><div class="oddbtn"><span class="l">70+</span><span class="v">2.10</span></div><div class="oddbtn"><span class="l">80+</span><span class="v">2.80</span></div></div></div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-interceptions" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player to make an interception</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo" style="min-width:140px"><div class="jersey" style="background:#C60C30">21</div><span style="font-size:13px">Jaylinn Hawkins</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">6.25</span></div></div></div>
+<div class="prow"><div class="pinfo" style="min-width:140px"><div class="jersey" style="background:#0a2240">3</div><span style="font-size:13px">Cole Bishop</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">7.50</span></div></div></div>
+<div class="prow"><div class="pinfo" style="min-width:140px"><div class="jersey" style="background:#C60C30">27</div><span style="font-size:13px">Christian Benford</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">7.00</span></div></div></div>
+<div class="prow"><div class="pinfo" style="min-width:140px"><div class="jersey" style="background:#0a2240">6</div><span style="font-size:13px">Christian Gonzalez</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">7.00</span></div></div></div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-sacks" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player sacks</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">44</div><span style="font-size:13px">K. Chaisson</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">2.30</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">7.50</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">23.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">57</div><span style="font-size:13px">A. Epenesa</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">2.75</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">10.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">97</div><span style="font-size:13px">J. Bosa</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">2.20</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">7.00</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">21.0</span></div></div></div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-kicking" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player kicking points</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">K</div><span style="font-size:13px">M. Prater</span></div><div class="strip"><div class="oddbtn"><span class="l">3+</span><span class="v">1.05</span></div><div class="oddbtn"><span class="l">5+</span><span class="v">1.26</span></div><div class="oddbtn"><span class="l">7+</span><span class="v">1.78</span></div><div class="oddbtn"><span class="l">9+</span><span class="v">2.80</span></div><div class="oddbtn"><span class="l">11+</span><span class="v">5.25</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">K</div><span style="font-size:13px">A. Borregales</span></div><div class="strip"><div class="oddbtn"><span class="l">3+</span><span class="v">1.05</span></div><div class="oddbtn"><span class="l">5+</span><span class="v">1.26</span></div><div class="oddbtn"><span class="l">7+</span><span class="v">1.75</span></div><div class="oddbtn"><span class="l">9+</span><span class="v">2.90</span></div><div class="oddbtn"><span class="l">11+</span><span class="v">5.00</span></div></div></div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-anytime" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player to score a touchdown</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">4</div><span style="font-size:13px">James Cook</span></div><div class="strip"><div class="oddbtn"><span class="l">Anytime</span><span class="v">1.98</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">6.50</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">10</div><span style="font-size:13px">Drake Maye</span></div><div class="strip"><div class="oddbtn"><span class="l">Anytime</span><span class="v">5.50</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">26.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">85</div><span style="font-size:13px">Hunter Henry</span></div><div class="strip"><div class="oddbtn"><span class="l">Anytime</span><span class="v">3.00</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">10.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">21</div><span style="font-size:13px">Ray Davis</span></div><div class="strip"><div class="oddbtn"><span class="l">Anytime</span><span class="v">13.0</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">41.0</span></div></div></div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-passing" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player passing props</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div style="display:flex;gap:6px;padding:2px 14px 10px;overflow-x:auto" id="subrow">
+<div class="subtab active" data-s="yards">Yards</div>
+<div class="subtab" data-s="completions">Completions</div>
+<div class="subtab" data-s="attempts">Attempts</div>
+<div class="subtab" data-s="tds">Pass TDs</div>
+</div>
+<div class="sub" id="s-yards">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">17</div><span style="font-size:13px">Josh Allen</span></div><div class="strip"><div class="oddbtn"><span class="l">175+</span><span class="v">1.22</span></div><div class="oddbtn"><span class="l">200+</span><span class="v">1.44</span></div><div class="oddbtn"><span class="l">225+</span><span class="v">1.86</span></div><div class="oddbtn"><span class="l">250+</span><span class="v">2.50</span></div><div class="oddbtn"><span class="l">275+</span><span class="v">3.60</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">10</div><span style="font-size:13px">Drake Maye</span></div><div class="strip"><div class="oddbtn"><span class="l">175+</span><span class="v">1.18</span></div><div class="oddbtn"><span class="l">200+</span><span class="v">1.38</span></div><div class="oddbtn"><span class="l">225+</span><span class="v">1.70</span></div><div class="oddbtn"><span class="l">250+</span><span class="v">2.25</span></div><div class="oddbtn"><span class="l">275+</span><span class="v">3.10</span></div></div></div>
+</div>
+<div class="sub" id="s-completions" style="display:none">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">17</div><span style="font-size:13px">Josh Allen</span></div><div class="strip"><div class="oddbtn"><span class="l">15+</span><span class="v">1.06</span></div><div class="oddbtn"><span class="l">20+</span><span class="v">1.62</span></div><div class="oddbtn"><span class="l">25+</span><span class="v">4.60</span></div><div class="oddbtn"><span class="l">30+</span><span class="v">19.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">10</div><span style="font-size:13px">Drake Maye</span></div><div class="strip"><div class="oddbtn"><span class="l">15+</span><span class="v">1.06</span></div><div class="oddbtn"><span class="l">20+</span><span class="v">1.57</span></div><div class="oddbtn"><span class="l">25+</span><span class="v">4.50</span></div><div class="oddbtn"><span class="l">30+</span><span class="v">17.0</span></div></div></div>
+</div>
+<div class="sub" id="s-attempts" style="display:none">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">17</div><span style="font-size:13px">Josh Allen</span></div><div class="strip"><div class="oddbtn"><span class="l">20+</span><span class="v">1.06</span></div><div class="oddbtn"><span class="l">25+</span><span class="v">1.26</span></div><div class="oddbtn"><span class="l">30+</span><span class="v">1.78</span></div><div class="oddbtn"><span class="l">35+</span><span class="v">3.10</span></div><div class="oddbtn"><span class="l">40+</span><span class="v">6.75</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">10</div><span style="font-size:13px">Drake Maye</span></div><div class="strip"><div class="oddbtn"><span class="l">20+</span><span class="v">1.04</span></div><div class="oddbtn"><span class="l">25+</span><span class="v">1.22</span></div><div class="oddbtn"><span class="l">30+</span><span class="v">1.70</span></div><div class="oddbtn"><span class="l">35+</span><span class="v">2.90</span></div><div class="oddbtn"><span class="l">40+</span><span class="v">6.25</span></div></div></div>
+</div>
+<div class="sub" id="s-tds" style="display:none">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#C60C30">17</div><span style="font-size:13px">Josh Allen</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">1.15</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">1.90</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">4.20</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">10.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#0a2240">10</div><span style="font-size:13px">Drake Maye</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">1.13</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">1.75</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">3.60</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">9.50</span></div></div></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<script>
+document.getElementById('pillrow').addEventListener('click',function(e){var p=e.target.closest('.pill');if(!p)return;document.querySelectorAll('#pillrow .pill').forEach(function(x){x.classList.remove('active')});p.classList.add('active');document.querySelectorAll('.panel').forEach(function(x){x.style.display='none'});document.getElementById('p-'+p.getAttribute('data-p')).style.display='block';});
+function toggleCard(head){var body=head.nextElementSibling;var ic=head.querySelector('.cc');var open=body.style.display!=='none';body.style.display=open?'none':'block';if(ic)ic.className=open?'ti ti-chevron-right cc':'ti ti-chevron-down cc';}
+var sr=document.getElementById('subrow');if(sr){sr.addEventListener('click',function(e){var t=e.target.closest('.subtab');if(!t)return;document.querySelectorAll('#subrow .subtab').forEach(function(x){x.classList.remove('active')});t.classList.add('active');document.querySelectorAll('#p-passing .sub').forEach(function(x){x.style.display='none'});document.getElementById('s-'+t.getAttribute('data-s')).style.display='block';});}
+</script>
