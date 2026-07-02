@@ -1,0 +1,69 @@
+<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-lg); padding:1.25rem;">
+<h2 class="sr-only">Mockup of player prop market cards for Florida Panthers vs Chicago Blackhawks, with an All pill first, then quick-access pills for goalscorer and shots on goal, matching the NFL horizontal scroll strip pattern</h2>
+<style>
+.nm{font-family:var(--font-sans);background:#101012;border-radius:14px;border:1px solid #232326;overflow:hidden;color:#f0f0f1}
+.pill{flex:0 0 auto;padding:7px 13px;border-radius:999px;border:1px solid #2c2d31;background:#1c1d20;color:#a3a3a7;font-size:12.5px;cursor:pointer;white-space:nowrap}
+.pill.active{background:#1c2e17;border-color:#5fbf34;color:#7ed957}
+.card{background:#17181b;border-radius:12px;border:1px solid #232326;margin-bottom:10px}
+.chead{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;cursor:pointer}
+.iconbtn{width:26px;height:26px;border-radius:50%;background:#202226;display:flex;align-items:center;justify-content:center;color:#9a9a9e;flex:0 0 auto}
+.prow{display:flex;align-items:center;gap:12px;padding:11px 14px;border-top:1px solid #202124}
+.card>.cbody>.prow:first-child{border-top:none}
+.pinfo{flex:0 0 auto;min-width:108px;display:flex;align-items:center;gap:9px}
+.jersey{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:500;color:#fff;flex:0 0 auto}
+.strip{display:flex;gap:8px;overflow-x:auto;flex:1;padding-bottom:2px}
+.oddbtn{background:#202226;border:1px solid #2a2c30;border-radius:10px;padding:8px 12px;min-width:56px;text-align:center;flex:0 0 auto}
+.oddbtn .l{display:block;font-size:10px;color:#9a9a9e;margin-bottom:2px;white-space:nowrap}
+.oddbtn .v{display:block;font-size:14px;font-weight:500;color:#f0f0f1}
+</style>
+<div class="nm">
+<div style="display:flex;align-items:center;gap:8px;padding:14px 14px 10px;overflow-x:auto" id="pillrow">
+<div class="pill" data-p="all">All</div>
+<div class="pill active" data-p="goalscorer">Goalscorer</div>
+<div class="pill" data-p="shots">Shots on goal</div>
+</div>
+<div style="padding:2px 14px 16px">
+
+<div class="panel" id="p-all" style="display:none">
+<div class="card">
+<div class="chead"><span style="font-size:13.5px;font-weight:500">All markets</span></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo" style="min-width:0"><span style="font-size:12.5px;color:#9a9a9e">Match Winner, Totals, Handicap, Correct Score, Odd/Even, First/Last Team to Score, First/Last Goalscorer (single flat list), period-split draw-no-bets, race-to, winning margin, overtime — 43 markets total, no dedicated pill, live here under the general filter.</span></div></div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-goalscorer">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player to score a goal <span style="color:#8a8a8e;font-weight:400;font-size:12px">(anytime + 2+ + 3+ tiered, per player)</span></span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#041E42">72</div><span style="font-size:13px">Sam Reinhart</span></div><div class="strip"><div class="oddbtn"><span class="l">Anytime</span><span class="v">2.10</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">26.0</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">53.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#041E42">23</div><span style="font-size:13px">Carter Verhaeghe</span></div><div class="strip"><div class="oddbtn"><span class="l">Anytime</span><span class="v">3.50</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">41.0</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">106.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#041E42">9</div><span style="font-size:13px">Sam Bennett</span></div><div class="strip"><div class="oddbtn"><span class="l">Anytime</span><span class="v">4.33</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">34.0</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">80.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#CF0A2C">63</div><span style="font-size:13px">Ilya Mikheyev</span></div><div class="strip"><div class="oddbtn"><span class="l">Anytime</span><span class="v">6.75</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">55.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#CF0A2C">19</div><span style="font-size:13px">Jason Dickinson</span></div><div class="strip"><div class="oddbtn"><span class="l">Anytime</span><span class="v">7.50</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">65.0</span></div></div></div>
+<div style="text-align:center;padding:9px;font-size:12px;color:#7ed957;border-top:1px solid #202124">SHOW 9 MORE PLAYERS</div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-shots" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player shots on goal</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#041E42">63</div><span style="font-size:13px">Brad Marchand</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">1.02</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">1.30</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">1.86</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">3.20</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#041E42">23</div><span style="font-size:13px">Carter Verhaeghe</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">1.01</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">1.20</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">1.62</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">2.80</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#041E42">15</div><span style="font-size:13px">Anton Lundell</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">1.03</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">1.45</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">2.05</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">3.60</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#041E42">9</div><span style="font-size:13px">Sam Bennett</span></div><div class="strip"><div class="oddbtn"><span class="l">1+</span><span class="v">1.01</span></div><div class="oddbtn"><span class="l">2+</span><span class="v">1.15</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">1.50</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">2.40</span></div></div></div>
+<div style="text-align:center;padding:9px;font-size:12px;color:#7ed957;border-top:1px solid #202124">SHOW 10 MORE PLAYERS</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<script>
+document.getElementById('pillrow').addEventListener('click',function(e){var p=e.target.closest('.pill');if(!p)return;document.querySelectorAll('#pillrow .pill').forEach(function(x){x.classList.remove('active')});p.classList.add('active');document.querySelectorAll('.panel').forEach(function(x){x.style.display='none'});document.getElementById('p-'+p.getAttribute('data-p')).style.display='block';});
+function toggleCard(head){var body=head.nextElementSibling;var ic=head.querySelector('.cc');if(!ic)return;var open=body.style.display!=='none';body.style.display=open?'none':'block';ic.className=open?'ti ti-chevron-right cc':'ti ti-chevron-down cc';}
+</script>
