@@ -1,0 +1,106 @@
+<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-lg); padding:1.25rem;">
+<h2 class="sr-only">Mockup of player prop market cards for Geelong Cats vs Brisbane Lions, with an All pill first, then quick-access pills for kicks, handballs, tackles, disposals, and marks, matching the horizontal scroll strip pattern used for NFL and NHL</h2>
+<style>
+.nm{font-family:var(--font-sans);background:#101012;border-radius:14px;border:1px solid #232326;overflow:hidden;color:#f0f0f1}
+.pill{flex:0 0 auto;padding:7px 13px;border-radius:999px;border:1px solid #2c2d31;background:#1c1d20;color:#a3a3a7;font-size:12.5px;cursor:pointer;white-space:nowrap}
+.pill.active{background:#1c2e17;border-color:#5fbf34;color:#7ed957}
+.card{background:#17181b;border-radius:12px;border:1px solid #232326;margin-bottom:10px}
+.chead{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;cursor:pointer}
+.iconbtn{width:26px;height:26px;border-radius:50%;background:#202226;display:flex;align-items:center;justify-content:center;color:#9a9a9e;flex:0 0 auto}
+.prow{display:flex;align-items:center;gap:12px;padding:11px 14px;border-top:1px solid #202124}
+.card>.cbody>.prow:first-child{border-top:none}
+.pinfo{flex:0 0 auto;min-width:108px;display:flex;align-items:center;gap:9px}
+.jersey{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:500;color:#fff;flex:0 0 auto}
+.strip{display:flex;gap:8px;overflow-x:auto;flex:1;padding-bottom:2px}
+.oddbtn{background:#202226;border:1px solid #2a2c30;border-radius:10px;padding:8px 12px;min-width:56px;text-align:center;flex:0 0 auto}
+.oddbtn .l{display:block;font-size:10px;color:#9a9a9e;margin-bottom:2px;white-space:nowrap}
+.oddbtn .v{display:block;font-size:14px;font-weight:500;color:#f0f0f1}
+</style>
+<div class="nm">
+<div style="display:flex;align-items:center;gap:8px;padding:14px 14px 10px;overflow-x:auto" id="pillrow">
+<div class="pill" data-p="all">All</div>
+<div class="pill active" data-p="kicks">Kicks</div>
+<div class="pill" data-p="handballs">Handballs</div>
+<div class="pill" data-p="tackles">Tackles</div>
+<div class="pill" data-p="disposals">Disposals</div>
+<div class="pill" data-p="marks">Marks</div>
+</div>
+<div style="padding:2px 14px 16px">
+
+<div class="panel" id="p-all" style="display:none">
+<div class="card">
+<div class="chead"><span style="font-size:13.5px;font-weight:500">All markets</span></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo" style="min-width:0"><span style="font-size:12.5px;color:#9a9a9e">Match Winner, Totals, Handicap, Line, Winning Margin, Correct/Exact Score Type, Draw No Bet, Odd/Even, Quarter with Most Points, First/Last Team to Score, Anytime/First/Last Goalscorer, Goal Combos — 84 markets total, no dedicated pill, live here under the general filter.</span></div></div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-kicks">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player kicks</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#002B5C">14</div><span style="font-size:13px">Tom Atkins</span></div><div class="strip"><div class="oddbtn"><span class="l">10+</span><span class="v">1.65</span></div><div class="oddbtn"><span class="l">15+</span><span class="v">2.90</span></div><div class="oddbtn"><span class="l">20+</span><span class="v">6.00</span></div><div class="oddbtn"><span class="l">25+</span><span class="v">14.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#002B5C">4</div><span style="font-size:13px">Sam De Koning</span></div><div class="strip"><div class="oddbtn"><span class="l">10+</span><span class="v">1.73</span></div><div class="oddbtn"><span class="l">15+</span><span class="v">3.10</span></div><div class="oddbtn"><span class="l">20+</span><span class="v">6.75</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#6A0032">22</div><span style="font-size:13px">Lachie Neale</span></div><div class="strip"><div class="oddbtn"><span class="l">10+</span><span class="v">1.55</span></div><div class="oddbtn"><span class="l">15+</span><span class="v">2.50</span></div><div class="oddbtn"><span class="l">20+</span><span class="v">5.00</span></div><div class="oddbtn"><span class="l">25+</span><span class="v">11.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#6A0032">7</div><span style="font-size:13px">Charlie Cameron</span></div><div class="strip"><div class="oddbtn"><span class="l">10+</span><span class="v">2.30</span></div><div class="oddbtn"><span class="l">15+</span><span class="v">4.50</span></div></div></div>
+<div style="text-align:center;padding:9px;font-size:12px;color:#7ed957;border-top:1px solid #202124">SHOW 40+ MORE PLAYERS</div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-handballs" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player handballs</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#002B5C">3</div><span style="font-size:13px">Mark O'Connor</span></div><div class="strip"><div class="oddbtn"><span class="l">5+</span><span class="v">1.10</span></div><div class="oddbtn"><span class="l">9+</span><span class="v">3.20</span></div><div class="oddbtn"><span class="l">13+</span><span class="v">8.00</span></div><div class="oddbtn"><span class="l">19+</span><span class="v">25.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#002B5C">8</div><span style="font-size:13px">Oliver Dempsey</span></div><div class="strip"><div class="oddbtn"><span class="l">5+</span><span class="v">1.05</span></div><div class="oddbtn"><span class="l">9+</span><span class="v">1.62</span></div><div class="oddbtn"><span class="l">13+</span><span class="v">4.50</span></div><div class="oddbtn"><span class="l">19+</span><span class="v">15.0</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#6A0032">31</div><span style="font-size:13px">Josh Dunkley</span></div><div class="strip"><div class="oddbtn"><span class="l">5+</span><span class="v">1.03</span></div><div class="oddbtn"><span class="l">9+</span><span class="v">1.19</span></div><div class="oddbtn"><span class="l">13+</span><span class="v">2.60</span></div></div></div>
+<div style="text-align:center;padding:9px;font-size:12px;color:#7ed957;border-top:1px solid #202124">SHOW 40+ MORE PLAYERS</div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-tackles" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player tackles</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#002B5C">9</div><span style="font-size:13px">Patrick Dangerfield</span></div><div class="strip"><div class="oddbtn"><span class="l">2+</span><span class="v">1.33</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">2.10</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">3.50</span></div><div class="oddbtn"><span class="l">5+</span><span class="v">6.00</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#6A0032">7</div><span style="font-size:13px">Charlie Cameron</span></div><div class="strip"><div class="oddbtn"><span class="l">2+</span><span class="v">1.30</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">1.75</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">2.30</span></div><div class="oddbtn"><span class="l">5+</span><span class="v">4.00</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#6A0032">36</div><span style="font-size:13px">Jarrod Berry</span></div><div class="strip"><div class="oddbtn"><span class="l">2+</span><span class="v">1.10</span></div><div class="oddbtn"><span class="l">3+</span><span class="v">1.35</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">1.70</span></div></div></div>
+<div style="text-align:center;padding:9px;font-size:12px;color:#7ed957;border-top:1px solid #202124">SHOW 40+ MORE PLAYERS</div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-disposals" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player disposals</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#002B5C">5</div><span style="font-size:13px">Bailey Smith</span></div><div class="strip"><div class="oddbtn"><span class="l">15+</span><span class="v">1.05</span></div><div class="oddbtn"><span class="l">20+</span><span class="v">1.40</span></div><div class="oddbtn"><span class="l">25+</span><span class="v">1.90</span></div><div class="oddbtn"><span class="l">30+</span><span class="v">2.80</span></div><div class="oddbtn"><span class="l">35+</span><span class="v">2.15</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#6A0032">36</div><span style="font-size:13px">Jarrod Berry</span></div><div class="strip"><div class="oddbtn"><span class="l">15+</span><span class="v">1.10</span></div><div class="oddbtn"><span class="l">20+</span><span class="v">1.78</span></div><div class="oddbtn"><span class="l">25+</span><span class="v">3.20</span></div><div class="oddbtn"><span class="l">30+</span><span class="v">6.50</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#6A0032">31</div><span style="font-size:13px">Josh Dunkley</span></div><div class="strip"><div class="oddbtn"><span class="l">15+</span><span class="v">1.05</span></div><div class="oddbtn"><span class="l">20+</span><span class="v">1.90</span></div><div class="oddbtn"><span class="l">25+</span><span class="v">4.00</span></div><div class="oddbtn"><span class="l">30+</span><span class="v">9.00</span></div></div></div>
+<div style="text-align:center;padding:9px;font-size:12px;color:#7ed957;border-top:1px solid #202124">SHOW 40+ MORE PLAYERS</div>
+</div>
+</div>
+</div>
+
+<div class="panel" id="p-marks" style="display:none">
+<div class="card">
+<div class="chead" onclick="toggleCard(this)"><span style="font-size:13.5px;font-weight:500">Player marks</span><div style="display:flex;gap:8px;align-items:center"><div class="iconbtn"><i class="ti ti-arrows-exchange" style="font-size:14px"></i></div><i class="ti ti-chevron-down cc" style="font-size:16px;color:#7ed957"></i></div></div>
+<div class="cbody">
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#002B5C">3</div><span style="font-size:13px">Jeremy Cameron</span></div><div class="strip"><div class="oddbtn"><span class="l">2+</span><span class="v">1.05</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">1.25</span></div><div class="oddbtn"><span class="l">6+</span><span class="v">1.65</span></div><div class="oddbtn"><span class="l">8+</span><span class="v">2.80</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#6A0032">28</div><span style="font-size:13px">Zac Bailey</span></div><div class="strip"><div class="oddbtn"><span class="l">2+</span><span class="v">1.15</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">2.00</span></div><div class="oddbtn"><span class="l">6+</span><span class="v">3.50</span></div><div class="oddbtn"><span class="l">8+</span><span class="v">6.00</span></div></div></div>
+<div class="prow"><div class="pinfo"><div class="jersey" style="background:#002B5C">21</div><span style="font-size:13px">Mark Blicavs</span></div><div class="strip"><div class="oddbtn"><span class="l">2+</span><span class="v">1.21</span></div><div class="oddbtn"><span class="l">4+</span><span class="v">2.10</span></div><div class="oddbtn"><span class="l">6+</span><span class="v">3.80</span></div></div></div>
+<div style="text-align:center;padding:9px;font-size:12px;color:#7ed957;border-top:1px solid #202124">SHOW 40+ MORE PLAYERS</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<script>
+document.getElementById('pillrow').addEventListener('click',function(e){var p=e.target.closest('.pill');if(!p)return;document.querySelectorAll('#pillrow .pill').forEach(function(x){x.classList.remove('active')});p.classList.add('active');document.querySelectorAll('.panel').forEach(function(x){x.style.display='none'});document.getElementById('p-'+p.getAttribute('data-p')).style.display='block';});
+function toggleCard(head){var body=head.nextElementSibling;var ic=head.querySelector('.cc');if(!ic)return;var open=body.style.display!=='none';body.style.display=open?'none':'block';ic.className=open?'ti ti-chevron-right cc':'ti ti-chevron-down cc';}
+</script>
